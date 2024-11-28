@@ -1,0 +1,50 @@
+:root{
+    --font-family: "Montserrat", sans-serif;
+}
+*{
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+html {
+  background-image: url(../img/background.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+main{
+    border: 2px  solid grey;
+    margin: auto;
+    width: 80vw;
+    max-width: 1440px;
+    background: white;
+}
+.section > h1{
+    width: 500px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 44px;
+    font-weight: 600;
+    font-weight: 700;
+    background: linear-gradient(180deg, #023e73 19.63%, rgba(2, 62, 115, 0) 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+
+

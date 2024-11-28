@@ -1,0 +1,182 @@
+.popular-services-section{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.popular-services{
+  height: 140px;
+  margin-bottom: 20px;
+}
+.service-scroll-container{
+  display: flex;
+  width: 100%;
+  overflow-x: hidden;
+}
+.service-page{
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+.service{
+  display: flex;
+  height: 100px;
+  scroll-snap-align: center;
+  text-align: justify;
+}
+.service img{
+  width: 110px;
+  height: 100%;
+  border-radius: 10px;
+}
+.service__information{
+  position: static;
+  padding-left: 5px;
+  width: 350px;
+  height: 100%;
+}
+.service-name{
+  position: static;
+  display: block;
+  height: 75px;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #000203;
+  text-shadow: 2px 2px 8px #000203;
+}
+.service-cost{
+  position: static;
+  height: 25px;
+  bottom: 0;
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #023e73;
+  text-shadow: 2px 2px 4px #023e73;
+}
+#popular-services > .prev-button,
+#popular-services > .next-button {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  transform: translateY(-50%);
+  background-color: #ffffff;
+  border-radius: 25px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #000000;
+}
+
+#popular-services > .prev-button {
+  left: 20px;
+}
+
+#popular-services> .next-button {
+  right: 20px;
+}
+#popular-services > .dot-container{
+    position: relative;
+    top: 20px;
+}
+.service__dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: rgba(2, 62, 115, 0.4);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.service__dot--active, .service__dot:hover {
+  background-color: #023e73;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+.actual-price{
+  width: 100%;
+}
+.actual-price > label{
+  font-weight: 700;
+  font-size: 30px;
+  background: linear-gradient(180deg,
+  #023e73 0%,#0471d2 92.75%,#0475d9 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.actual-price > .download-button{
+  border-radius: 30px;
+  padding: 15px 48px;
+  width: 200px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  background: linear-gradient(to right,
+  #023E73, #FFFFFF 140%);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.download-button:hover{
+  background: linear-gradient(to right,
+  SkyBlue, white 140%);
+}
+.price-list{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  width: 100%;
+  gap: 40px;
+  justify-content: center;
+}
+.price-list > .prev-button,
+.price-list > .next-button {
+  cursor: pointer;
+  position: relative;
+  margin: auto 0;
+  /* margin-top: 15%; */
+  height: 50px;
+  width: 50px;
+  transform: translateY(-50%);
+  background-color: #9e9d9d;
+  border-radius: 25px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #000000;
+}
+.list{
+  margin: 30px;
+  width: 400px;
+  height: 500px;
+  border: 5px solid #023e73;
+}
+.list > img{
+  width: 100%;
+  height: 100%;
+}
+div .choosen{
+  width: 450px;
+  height: 550px;
+  margin: 0px;
+  position: absolute;
+}
+.actual-price > span{
+  margin: 0 10%;
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  background: linear-gradient(180deg,
+   #564f4f 0%, #b8a8a8 42%,
+   rgba(188, 172, 172, 0.37) 97%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

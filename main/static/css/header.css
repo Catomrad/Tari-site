@@ -1,0 +1,73 @@
+.header{
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    width: 100%;
+    background: white;
+    box-shadow: 0px 1px 5px #000;
+}
+.header__content{
+    display: flex;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto 0 auto;
+}
+#header__logo{
+    height: 100px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+#header__contacts{
+    background: #023E73;
+    padding: 0px 5px 0px 5px;
+}
+#header__contacts > ul {
+    text-align: center;
+}
+#header__contacts>ul>u{
+    font-weight: normal;
+    font-size: 16px;
+    color: white;
+}
+#header__contacts>ul>li{
+    padding-bottom: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+}
+
+#header__links{
+    margin: auto;
+    text-align: center;
+}
+#header__links>ul{
+    display: flex;
+    gap: 30px;
+}
+#header__links>ul>li>a{
+    font-weight: bold;
+    font-size: 16px;
+    color: #023E73;
+    text-transform: uppercase;
+}
+#header__links>ul>li>a:hover{
+    text-decoration-line: underline;
+}
+#header__sign-up-button{
+    margin: auto 0;
+    width: 200px;
+    height: 50px;
+    padding: 0 20px 0 20px;
+    border-radius: 30px;
+    border-style: none;
+    background: linear-gradient(to right,
+    #023E73, #FFFFFF 140%);
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+#header__sign-up-button:hover{
+    background: linear-gradient(to right,
+    SkyBlue, white 140%);
+}

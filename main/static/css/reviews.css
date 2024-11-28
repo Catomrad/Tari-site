@@ -1,0 +1,44 @@
+.reviews-section{
+    margin: 20px 0;
+}
+.review{
+    border-radius: 40px;
+    width: 305px;
+    padding: 10px;
+    height: 280px;
+    background: #d9d9d9;
+    box-shadow: 9px 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.review-Yandex{
+    width:560px;
+    height:800px;
+    overflow:hidden;
+    position:relative;
+    border-radius:40px;
+    background-color: antiquewhite;
+    box-shadow: 9px 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.review-Yandex > iframe{
+    width:100%;
+    height:100%;
+}
+.review-Yandex > a{
+    box-sizing:border-box;
+    text-decoration:none;
+    color:#b3b3b3;
+    font-size:10px;
+    font-family:YS Text,sans-serif;
+    padding:0 20px;
+    position:absolute;
+    bottom:8px;
+    width:100%;
+    text-align:center;
+    left:0;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:block;
+    max-height:14px;
+    white-space:nowrap;
+    padding:0 16px;
+    box-sizing:border-box
+}

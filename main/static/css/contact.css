@@ -1,0 +1,20 @@
+.contact-section{
+    margin: 20px;
+}
+.contacts{
+    width: 60%;
+    font-weight: 700;
+    font-size: 16px;
+    color: #564f4f;
+}
+.contacts > span{
+    font-weight: 700;
+    font-size: 20px;
+    color: #023e73;
+}
+.contacts_and_map-container{
+    display:flex;
+}
+.map{
+    width: 40%;
+}

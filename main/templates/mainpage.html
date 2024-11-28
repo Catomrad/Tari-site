@@ -1,0 +1,346 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reviews.css' %}">
+    <link rel="stylesheet" href="{% static 'css/services.css' %}">
+    <link rel="stylesheet" href="{% static 'css/employees.css' %}">
+    <link rel="stylesheet" href="{% static 'css/banners.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    <link rel="stylesheet" href="{% static 'css/questions.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <meta charset="UTF-8">
+    <title>Стоматологическая клиника "Tari"</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__content">
+            <img id="header__logo" alt='Logo'
+                src= "{% static 'img/logotip1.png' %}">
+            <div id="header__contacts">
+                <ul>
+                    <u>пн-пт с 09:00-19:00</u>
+                    <li><i class="fas fa-map-marker-alt"></i> пр-т. Ленина 94</li>
+                    <li><i class="fas fa-phone"></i> 8(3842)544-222</li>
+                    <li><i class="fab fa-whatsapp"></i> 8(996)413-08-81</li>
+                </ul>
+            </div>
+            <nav id="header__links">
+                <ul>
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/">Услуги</a></li>
+                    <li><a href="/">Специалисты</a></li>
+                    <li><a href="/">Отзывы</a></li>
+                    <li><a href="/">О Клинике</a></li>
+                    <li><a href="/">Контакты</a></li>
+                </ul>
+            </nav>
+            <button id="header__sign-up-button">Запись на приём</button>
+        </div>
+    </header>
+    <main class="main">
+        <section class="section banners-section">
+            <div class="banners__scroll-container">
+                <div class="banner">
+                    <img src= "{% static 'img/ESCF1606.jpg' %}">
+                    <div class="banner__text">
+                        <span class="big-span">Самая Лучшая забота о вашей улыбке</span><br>
+                        <span>Бесплатная консультация ортопеда</span><br>
+                        <span>Лечение и протезирование в одной клинике</span><br>
+                        <button>Позвонить</button>
+                    </div>
+                </div>
+                <div class="banner">
+                    <img src= "{% static 'img/ESCF1629.jpg' %}">
+                    <div class="banner__text">
+                        <span class="big-span">Лучшая забота о вашей улыбке</span><br>
+                        <span>Бесплатная консультация ортопеда</span><br>
+                        <span>Лечение и протезирование в одной клинике</span><br>
+                        <button>Позвонить</button>
+                    </div>
+                </div>
+                <div class="banner">
+                    <img src= "{% static 'img/ESCF1345.jpg' %}">
+                    <div class="banner__text">
+                        <span class="big-span">Лучшая забота о вашей улыбке</span><br>
+                        <span>Бесплатная консультация ортопеда</span><br>
+                        <span>Лечение и протезирование в одной клинике</span><br>
+                        <button>Позвонить</button>
+                    </div>
+                </div>
+            </div>
+            <button class="prev-button" onclick="banner_slider.plusSlides(-1)"
+             aria-label="Посмотреть предыдущий слайд">&lt;</button>
+            <button class="next-button" onclick="banner_slider.plusSlides(1)"
+             aria-label="Посмотреть следующий слайд">&gt</button>
+            <div class="dot-container" style="text-align:center">
+                <span class="banner__dot" onclick="banner_slider.currentSlide(1)"></span>
+                <span class="banner__dot" onclick="banner_slider.currentSlide(2)"></span>
+                <span class="banner__dot" onclick="banner_slider.currentSlide(3)"></span>
+            </div>
+        </section>
+        <section class="section popular-services-section">
+            <h1>Популярные услуги</h1>
+            <div class="popular-services">
+                <div class="service-scroll-container">
+                    <div class="service-page">
+                        <div class="service">
+                            <img src="{% static 'img/Tooth.jpg' %}">
+                            <div class="service__information">
+                                <div class="service-name">Профессиональная гигиена +
+                                глубокое фторирование</div>
+                                <div class="service-cost">ОТ 2200 Р</div>
+                            </div>
+                        </div>
+                        <div class="service">
+                            <img src="{% static 'img/Tooth.jpg' %}">
+                            <div class="service__information">
+                                <div class="service-name">Профессиональная гигиена +
+                                глубокое фторирование</div>
+                                <div class="service-cost">ОТ 2200 Р</div>
+                            </div>
+                        </div>
+                        <div class="service">
+                            <img src="{% static 'img/Tooth.jpg' %}">
+                            <div class="service__information">
+                                <div class="service-name">Профессиональная гигиена +
+                                глубокое фторирование</div>
+                                <div class="service-cost">ОТ 2200 Р</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-page">
+                        <div class="service">
+                            <img src="{% static 'img/ESCF1345.jpg' %}">
+                            <div class="service__information">
+                                <div class="service-name">гигиена +
+                                глубокое фторирование</div>
+                                <div class="service-cost">ОТ 2200 Р</div>
+                            </div>
+                        </div>
+                        <div class="service">
+                            <img src="{% static 'img/ESCF1784.jpg' %}">
+                            <div class="service__information">
+                                <div class="service-name">Профессиональная гигиена +
+                                глубокое фторирование</div>
+                                <div class="service-cost">ОТ 2200 Р</div>
+                            </div>
+                        </div>
+                        <div class="service">
+                            <img src="{% static 'img/ESCF1629.jpg' %}">
+                            <div class="service__information">
+                                <span class="service-name">Профессиональная гигиена +
+                                глубокое фторирование</span>
+                                <span class="service-cost">ОТ 2200 Р</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dot-container" style="text-align:center">
+                    <span class="service__dot" onclick="service_slider.currentSlide(1)"></span>
+                    <span class="service__dot" onclick="service_slider.currentSlide(2)"></span>
+                    <!-- <span class="service__dot" onclick="service_slider.currentSlide(3)"></span> -->
+                </div>
+            </div>
+            <div class="actual-price">
+                <label>Актуальный прайс от 12.02.2024</label>
+                <button class="button download-button">Скачать</button>
+                <div class="price-list">
+                    <button class="prev-button" onclick="plusSlides(-1)"
+                    aria-label="Посмотреть предыдущий слайд">&lt;</button>
+                    <div class="list" onclick="showLists(0)">
+                        <img src="{% static 'img/List1.png' %}"
+                        alt="список цен">
+                    </div>
+                    <div class="list" onclick="showLists(1)">
+                        <img src="{% static 'img/List2.png' %}"
+                        alt="список цен">
+                    </div>
+                    <div class="list" onclick="showLists(2)">
+                        <img src="{% static 'img/List3.png' %}"
+                        alt="список цен">
+                    </div>
+                    <button class="next-button" onclick="plusSlides(1)" 
+                aria-label="Посмотреть следующий слайд">&gt</button>
+                </div>        
+                <span>ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ НЕОБХОДИМО ПРОКОНСУЛЬТИРОВАТЬСЯ С ВРАЧОМ</span>
+            </div>
+        </section>
+        <section class="section employees-section">
+            <h1>Наши специалисты</h1>
+            <div class="employees__scroll-container">
+                <button class="prev-button"aria-label="Посмотреть предыдущий слайд">&lt;</button>
+                <div class="employees">
+                    <div class="employee-card">
+                        <img src="{% static 'img/Kiselev.png' %}">
+                        <div class="main-info">
+                            <span class="employee-name">Киселев Сергей Юрьевич</span><br>
+                            <span class="employee-qualification">Врач Стоматолог-Ортопед</span><br>
+                            <span class="employee-experience">Стаж работы 27 лет</span>
+                            <div class="employee-description">
+                                <span>Проявляет внимательность к своим пациентам и
+                                подбирает план лечения индивидуально, исходя из показаний к тем или иным конструкциям, личных пожеланий
+                                и возможностей каждого. Является Членом Стоматологической Ассоциации. Регулярно повышает свою
+                                квалификацию.</span><br>Принимает взрослых.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="employee-card">
+                        <img src="{% static 'img/Murashkina.png' %}">
+                        <div class="main-info">
+                            <span class="employee-name">Мурашкина Юлия Юрьевна</span><br>
+                            <span class="employee-qualification">Врач Стоматолог</span><br>
+                            <span class="employee-experience">Стаж работы 4 года</span>
+                            <div class="employee-description">
+                                Молодой, но грамотный специалист в сфере стоматологии. Активно обуается новым методам лечения, проходит
+                                курсы и вебинары. Явлется Членом Стоматологической Ассоциации.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="employee-card">
+                        <img src="{% static 'img/Loran.png' %}">
+                        <div class="main-info">
+                            <span class="employee-name">Лоран Денис Викторович</span><br>
+                            <span class="employee-qualification">Врач Стоматолог-Терапевт</span><br>
+                            <span class="employee-experience">Стаж работы 20 лет</span>
+                            <div class="employee-description">
+                                Владеет навыками лечения всех форм кариеса и его осложнений (пульпит, переодинтит).
+                                <br><br>
+                                Внимательно относится к каждому пациенту и строит индивидуальный план лечения. В работе проявляет себя
+                                как специалист своего дела, имеет стаж работы 20 лет и постоянно проходит курсы повышения квалификации,
+                                обучения, вебинары.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="employee-card">
+                        <img src="{% static 'img/Shakirova.png' %}">
+                        <div class="main-info">
+                            <span class="employee-name">Шакирова Марина Владимировна</span><br>
+                            <span class="employee-qualification">Врач Стоматолог Общей практики</span><br>
+                            <span class="employee-experience">Стаж работы 7 лет</span>
+                            <div class="employee-description">
+                                Выполняет лечение кариеса и осложнённых форм кариеса у детей, профгигиену, герметизацию фиссур, проводит
+                                психологическую подготовку детей к приему стоматолога. Так же закончила ординатуру по специальности
+                                ортодонтия.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="next-button" aria-label="Посмотреть следующий слайд">&gt</button>
+            </div>
+        </section>
+        <section class="section reviews-section">
+            <h1>Отзывы</h1>
+            <div class="reviews-cascade">
+                <div class="review" style="display: none;">
+                    <span class="review-author">Автор</span>
+                    <span class="review-comment">Комментарий</span>  
+                </div>
+            </div>
+            <div class="review-Yandex">
+                <iframe 
+                src="https://yandex.ru/maps-reviews-widget/1090980756?comments"></iframe>
+                <a href="https://yandex.ru/maps/org/tari/1090980756/" 
+                target="_blank" >Тари на карте Кемерова — Яндекс Карты</a>
+            </div>
+        </section>
+        <section class="section about-section">
+            <h1>О клинике</h1>
+            <div class="description">
+                <div class="description__text">
+                    <span>В стоматологии «Тари»</span> создана уютная атмосфера для ощущения комфорта 
+                    и спокойствия своих пациентов. 
+    Клиентам гарантируется доступная стоимость услуг и высокий уровень культуры обслуживания.
+
+    <br> <br> <span>Мы предлагаем широкий перечень услуг терапевтических:</span> аппликационная и инфильтрационная анестезия 
+с использованием импортных препаратов, 
+раскрытие полости зуба, медикаментозная обработка кариозной полости, восстановление зуба пломбой 
+с использованием материалов химического и светового отверждения. Здесь проводится комплексная 
+гигиена всей полости рта: 
+фторирование эмали, удаление зубных отложений ультразвуковым методом и прибором Air Flow.
+<br> <span>Ортопедических:</span> изготовление временных коронок, полный съемный протез, бюгельный протез, 
+изготовление временных коронок, цельнолитая коронка, металлокерамическая коронка, металлокерамическая коронка на имплантат и др.
+                </div>
+                <div class="description__images">
+                    <img src="{% static 'img/Tooth.jpg' %}">
+                    <img src="{% static 'img/Tooth.jpg' %}">
+                    <img src="{% static 'img/Tooth.jpg' %}">
+                    <img src="{% static 'img/Tooth.jpg' %}">
+                    <span>Клиника работает в будние дни, с 9:00 до 19:00 
+                        (суббота и воскресенье – выходной).</span>
+                </div>
+            </div>
+            <div class="license-container"> 
+                <h2>Лицензия</h2>
+                <div class="licenses">
+                    <img src="{% static 'img/List1.png' %}">
+                    <img src="{% static 'img/List2.png' %}">
+                    <img src="{% static 'img/List3.png' %}">
+                </div>
+            </div>
+            <div class="documents">
+                <button>Документы +</button>
+                <div class="documents-container">
+                    
+                </div>
+            </div>
+        </section>
+        <section class="section contact-section">
+            <h1>Контакты</h1>
+            <div class="contacts_and_map-container">
+                <div class="contacts">
+                    <span>Наименование:</span><br>
+                    Полное наименование - Общество с ограниченной 
+                    ответственностью "Тари"; 
+                    Сокращённое наименование - ООО "Тари";
+                    <br><span>Адрес:</span><br>
+                    650023, Россия, Кемеровская область, г. Кемерово, 
+                    пр. Ленина, д. 94-3;
+                    <br><span>Режим работы:</span><br>
+                    Понедельник - Пятница с 09:00 до 19:00;
+    Суббота, воскресенье - выходные дни.
+                    <br><span>Телефоны:</span><br>
+                    8(3842)-544-222;
+    8(996)-413-08-81.
+                    <br><span>Email:</span><br>
+                    TARIstomatolog@yandex.ru
+                    <br><span>Приём граждан генеральным директором:</span><br>
+                    Вторник с 11:00 до 13:00 
+                </div>
+                <div class="map" style="position:relative;overflow:hidden;">
+                    <a href="https://yandex.ru/maps/org/tari/1090980756/?utm_medium=mapframe&utm_source=maps" 
+                    style="color:#eee;font-size:12px;position:absolute;top:0px;">Тари</a>
+                    <a href="https://yandex.ru/maps/64/kemerovo/category/dental_clinic/184106132/?utm_medium=mapframe&utm_source=maps" 
+                    style="color:#eee;font-size:12px;position:absolute;top:14px;">Стоматологическая клиника в Кемерове</a>
+                    <iframe src="https://yandex.ru/map-widget/v1/?ll=86.137689%2C55.345348&mode=search&oid=1090980756&ol=biz&z=13.88" 
+                    width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+                </div>
+            </div>
+        </section>
+        <section class="section question-section">
+            <h2>Закажите звонок или свяжитесь с нами самостоятельно</h2>
+            <div class="buttons">
+                <button>Заказать звонок</button>
+                <button><i class="fab fa-whatsapp"></i>Написать в WhatsApp</button>
+                <button>Позвонить</button>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="{% static 'js/sliders1.js' %}"></script>
+    <script src="{% static 'js/sliders.js' %}"></script>
+</body>
+
+</html>

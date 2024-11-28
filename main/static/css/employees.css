@@ -1,0 +1,58 @@
+.employees-section{
+    margin-top: 20px;
+
+}
+.employees__scroll-container{
+    display: flex;
+    justify-content: center;
+}
+.employees{
+    display: flex;
+    width: 80%;
+    overflow: hidden;
+}
+.employee-card{
+    width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.employee-card > img {
+    width: 300px;
+}
+
+.employee-name{
+    color: #023E73;
+    font-size: 34px;
+    font-weight: 400;
+}
+.employee-qualification{
+    color: #023E73;
+    font-size: 24px;
+    font-weight: 400;
+}
+.employee-experience{
+    color: #023E73;
+    font-size: 14px;
+    font-weight: 400;
+}
+.employee-description{
+    display: none;
+    text-align: left;
+    margin-top: 20px;
+    color: #023E73;
+    font-size: 24px;
+    font-weight: 400;
+}
+.employees__scroll-container > .prev-button,
+.employees__scroll-container > .next-button {
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  margin: auto 10px;
+  transform: translateY(-50%);
+  background-color: #a5a3a3;
+  border-radius: 25px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #000000;
+}
