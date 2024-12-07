@@ -3,6 +3,7 @@
 }
 *{
     font-family: var(--font-family);
+    font-size: 12px;
     margin: 0;
     padding: 0;
     border: 0;
@@ -24,10 +25,10 @@ a{
     text-decoration: none;
 }
 main{
-    border: 2px  solid grey;
+    /*border: 2px  solid grey;*/
     margin: auto;
     width: 80vw;
-    max-width: 1440px;
+    max-width: 1200px;
     background: white;
 }
 .section > h1{
@@ -39,12 +40,16 @@ main{
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
+
     font-size: 44px;
     font-weight: 600;
     font-weight: 700;
-    background: linear-gradient(180deg, #023e73 19.63%, rgba(2, 62, 115, 0) 100%);
+    background: linear-gradient(180deg, #023e73 19.63%, rgba(2, 62, 115, 0) 120%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    
+    font-family: var(--font-family);
+
     }
 
 
