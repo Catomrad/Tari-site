@@ -3,16 +3,29 @@
 
 }
 .employees__scroll-container{
-    display: flex;
-    justify-content: center;
+    position: relative; 
+    display: flex;/* Для позиционирования кнопок */
+    width: 90%;
+    max-width: 1200px; /* Увеличим максимальную ширину для лучшего отображения */
+    margin: 0 auto;
+    overflow: hidden; /* Скрываем лишние карточки */
 }
 .employees{
     display: flex;
-    width: 80%;
-    overflow: hidden;
+    width: 100%; /* Контейнер занимает всю ширину */
+    overflow-x: scroll; /* Добавляем горизонтальную прокрутку */
+    scroll-behavior: smooth; /* Плавная прокрутка */
+    gap: 20px; /* Расстояние между карточками */
+    padding: 20px 0; /* Отступы для корректной прокрутки */
+    -ms-overflow-style: none; /* Скрываем полосу прокрутки для IE и Edge */
+    scrollbar-width: none; /* Скрываем полосу прокрутки для Firefox */
+}
+/* Скрываем полосу прокрутки для Chrome, Safari и Opera */
+.employees::-webkit-scrollbar {
+    display: none;
 }
 .employee-card{
-    width: 1300px;
+    flex: 0 0 300px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -21,27 +34,26 @@
 }
 
 .employee-name{
-    color: #023E73;
-    font-size: 34px;
-    font-weight: 400;
+    font-weight: 700;
+    font-size: 20px;
+    color: #000203;
 }
 .employee-qualification{
-    color: #023E73;
-    font-size: 24px;
-    font-weight: 400;
+    font-weight: 500;
+    font-size: 16px;
+    color: #564f4f;
 }
 .employee-experience{
-    color: #023E73;
-    font-size: 14px;
-    font-weight: 400;
+    font-weight: 500;
+    font-size: 16px;
+    color: #564f4f;
 }
 .employee-description{
-    display: none;
     text-align: left;
     margin-top: 20px;
-    color: #023E73;
-    font-size: 24px;
-    font-weight: 400;
+    font-weight: 500;
+    font-size: 16px;
+    color: #564f4f;
 }
 .employees__scroll-container > .prev-button,
 .employees__scroll-container > .next-button {

@@ -45,6 +45,9 @@
                     <li><a href="#contact-section">Контакты</a></li>
                 </ul>
             </nav>
+            <button class="header__toggle" aria-label="Открыть меню">
+                <span class="header__toggle-icon"><i class="fas fa-bars"></i></span>
+            </button>
             <button class="highlight-button header__sign-up-button openModalBtn">Запись на приём</button>
         </div>
     </header>
@@ -154,9 +157,9 @@
             </div>
             <div class="actual-price">
                 <label>Актуальный прайс от 12.02.2024</label>
-                <button class="highlight-button download-button">Скачать</button>
+                <button class="highlight-button download-button"><a href="{% static 'img/Tooth.jpg' %}" download>Скачать</a></button>
                 <div class="price-list">
-                    <button class="prev-button" onclick="plusSlides(-1)"
+                    <button class="prev-button" onclick="prevList()"
                     aria-label="Посмотреть предыдущий слайд">&lt;</button>
                     <div class="list" onclick="showLists(0)">
                         <img src="{% static 'img/List1.png' %}"
@@ -170,7 +173,7 @@
                         <img src="{% static 'img/List3.png' %}"
                         alt="список цен">
                     </div>
-                    <button class="next-button" onclick="plusSlides(1)" 
+                    <button class="next-button" onclick="nextList()" 
                 aria-label="Посмотреть следующий слайд">&gt</button>
                 </div>        
                 <div class="attention">ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ НЕОБХОДИМО ПРОКОНСУЛЬТИРОВАТЬСЯ С ВРАЧОМ</div>
@@ -179,80 +182,81 @@
         <section id="employees-section">
             <h1>Наши специалисты</h1>
             <div class="employees__scroll-container">
-                <button class="prev-button"aria-label="Посмотреть предыдущий слайд">&lt;</button>
+                <button class="prev-button" onclick="scrollPrev()" aria-label="Посмотреть предыдущий слайд">&lt;</button>
                 <div class="employees">
                     <div class="employee-card">
                         <img src="{% static 'img/Kiselev.png' %}">
                         <div class="main-info">
-                            <span class="employee-name">Киселев Сергей Юрьевич</span><br>
+                            <span class="employee-name">Киселев <br> Сергей Юрьевич</span><br>
                             <span class="employee-qualification">Врач Стоматолог-Ортопед</span><br>
-                            <span class="employee-experience">Стаж работы 27 лет</span>
-                            <div class="employee-description">
-                                <span>Проявляет внимательность к своим пациентам и
-                                подбирает план лечения индивидуально, исходя из показаний к тем или иным конструкциям, личных пожеланий
-                                и возможностей каждого. Является Членом Стоматологической Ассоциации. Регулярно повышает свою
-                                квалификацию.</span><br>Принимает взрослых.
-                            </div>
+                            <span class="employee-experience">Стаж работы 27 лет</span><br><br>
+                            <span class="employee-description">График приема: пн-пт 09:00 – 14:00.</span>
                         </div>
-
                     </div>
                     <div class="employee-card">
                         <img src="{% static 'img/Murashkina.png' %}">
                         <div class="main-info">
-                            <span class="employee-name">Мурашкина Юлия Юрьевна</span><br>
+                            <span class="employee-name">Мурашкина <br> Юлия Юрьевна</span><br>
                             <span class="employee-qualification">Врач Стоматолог</span><br>
-                            <span class="employee-experience">Стаж работы 4 года</span>
-                            <div class="employee-description">
-                                Молодой, но грамотный специалист в сфере стоматологии. Активно обуается новым методам лечения, проходит
-                                курсы и вебинары. Явлется Членом Стоматологической Ассоциации.
-                            </div>
+                            <span class="employee-experience">Стаж работы 4 года</span><br><br>
+                            <span class="employee-description">График приёма: По четным числам месяца (кроме праздников и выходных) - 09:00 – 14:00; 
+                                По нечетным числам месяца (кроме праздников и выходных) - 14:00 – 19:00
+                            </span>
                         </div>
                     </div>
                     <div class="employee-card">
                         <img src="{% static 'img/Loran.png' %}">
                         <div class="main-info">
-                            <span class="employee-name">Лоран Денис Викторович</span><br>
+                            <span class="employee-name">Лоран <br> Денис Викторович</span><br>
                             <span class="employee-qualification">Врач Стоматолог-Терапевт</span><br>
-                            <span class="employee-experience">Стаж работы 20 лет</span>
-                            <div class="employee-description">
-                                Владеет навыками лечения всех форм кариеса и его осложнений (пульпит, переодинтит).
-                                <br><br>
-                                Внимательно относится к каждому пациенту и строит индивидуальный план лечения. В работе проявляет себя
-                                как специалист своего дела, имеет стаж работы 20 лет и постоянно проходит курсы повышения квалификации,
-                                обучения, вебинары.
-                            </div>
+                            <span class="employee-experience">Стаж работы 20 лет</span><br><br>
+                            <span class="employee-description">
+                                График приёма: По четным числам месяца (кроме праздников и выходных) - 14:00 – 19:00; 
+                                По нечетным числам месяца (кроме праздников и выходных) - 09:00 – 14:00
+                            </span>
                         </div>
                     </div>
                     <div class="employee-card">
                         <img src="{% static 'img/Shakirova.png' %}">
                         <div class="main-info">
-                            <span class="employee-name">Шакирова Марина Владимировна</span><br>
-                            <span class="employee-qualification">Врач Стоматолог Общей практики</span><br>
-                            <span class="employee-experience">Стаж работы 7 лет</span>
-                            <div class="employee-description">
-                                Выполняет лечение кариеса и осложнённых форм кариеса у детей, профгигиену, герметизацию фиссур, проводит
-                                психологическую подготовку детей к приему стоматолога. Так же закончила ординатуру по специальности
-                                ортодонтия.
-                            </div>
+                            <span class="employee-name">Шакирова <br> Марина Владимировна</span><br>
+                            <span class="employee-qualification">Зубной техник</span><br>
+                            <span class="employee-experience">Стаж работы 18 лет</span><br><br>
+                            <span class="employee-description">Приём пациентов не ведет.</span>
                         </div>
                     </div>
                 </div>
-                <button class="next-button" aria-label="Посмотреть следующий слайд">&gt</button>
+                <button class="next-button" onclick="scrollNext()" aria-label="Посмотреть следующий слайд">&gt</button>
             </div>
         </section>
         <section id="reviews-section">
             <h1>Отзывы</h1>
-            <div class="reviews-cascade">
+            <!--<div class="reviews-cascade">
                 <div class="review" style="display: none;">
                     <span class="review-author">Автор</span>
                     <span class="review-comment">Комментарий</span>  
                 </div>
-            </div>
+            </div>-->
             <div class="review-Yandex">
                 <iframe 
                 src="https://yandex.ru/maps-reviews-widget/1090980756?comments"></iframe>
                 <a href="https://yandex.ru/maps/org/tari/1090980756/" 
                 target="_blank" >Тари на карте Кемерова — Яндекс Карты</a>
+            </div>
+            <h2>Отзывы о нас на других площадках</h2>
+            <div class="review_link_buttons">
+                <button class="highlight-button">
+                    <a href="https://yandex.ru/maps/org/tari/1090980756/reviews/?ll=86.137677%2C55.345293&utm_content=add_review&utm_medium=reviews&utm_source=maps-reviews-widget&z=12">Яндекс</a>
+                </button>
+                <button class="highlight-button">
+                    <a href="https://2gis.ru/kemerovo/search/кемерово%20тари/firm/704215722786357?m=86.137715%2C55.345334%2F17.26">2ГИС</a>
+                </button>
+                <button class="highlight-button">
+                    <a href="https://kemerovo.flamp.ru/firm/tari_ooo_stomatologiya-704215722786357">Фламп</a>
+                </button>
+                <button class="highlight-button">
+                    <a href="https://prodoctorov.ru/kemerovo/lpu/27139-tari/">Продокторов</a>
+                </button>
             </div>
         </section>
         <section id="about-section">
@@ -441,7 +445,6 @@
             </form> 
         </div>
     </div>
-    <script src="{% static 'js/sliders1.js' %}"></script>
     <script src="{% static 'js/sliders.js' %}"></script>
     <script src="{% static 'js/modal.js' %}"></script>
 </body>

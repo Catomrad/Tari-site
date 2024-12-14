@@ -32,7 +32,7 @@
 .service__information{
   position: static;
   padding-left: 5px;
-  width: 350px;
+  max-width: 350px;
   height: 100%;
 }
 .service-name{
@@ -116,15 +116,22 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.actual-price > .download-button{
+.download-button{
   padding: 15px 48px;
   width: 200px;
   font-size: 16px;
 }
+.download-button a{
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+}
+
 /*.download-button:hover{
   background: linear-gradient(to right,
   SkyBlue, white 140%);
 }*/
+
 .price-list{
   padding-top: 30px;
   padding-bottom: 30px;

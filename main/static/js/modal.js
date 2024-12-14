@@ -20,3 +20,7 @@ window.addEventListener('click', (event) => {
         modal.style.display = 'none';
     }
 });
+
+document.querySelector('.header__toggle').addEventListener('click', function () {
+    document.querySelector('.header__links').classList.toggle('active');
+});
