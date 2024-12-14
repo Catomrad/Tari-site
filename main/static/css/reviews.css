@@ -1,5 +1,6 @@
-.reviews-section{
+#reviews-section{
     margin: 20px 0;
+    justify-content: center;
 }
 .review{
     border-radius: 40px;
@@ -30,15 +31,12 @@
     font-family:YS Text,sans-serif;
     padding:0 20px;
     position:absolute;
-    bottom:8px;
     width:100%;
     text-align:center;
-    left:0;
     overflow:hidden;
     text-overflow:ellipsis;
     display:block;
     max-height:14px;
     white-space:nowrap;
-    padding:0 16px;
     box-sizing:border-box
 }

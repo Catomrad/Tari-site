@@ -1,7 +1,7 @@
-.header{
+header{
     position: sticky;
     top: 0px;
-    z-index: 100;
+    z-index: 10;
     width: 100%;
     background: white;
     box-shadow: 0 8px 10px 1px rgba(2, 62, 115, 0.25);
@@ -11,64 +11,58 @@
     display: flex;
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto 0 auto;
+    margin: 0 auto;
 }
-#header__logo{
+.header__logo{
     height: 100px;
     width: 200px;
     padding: 2px 5px 2px 5px;
 }
-#header__contacts{
+.header__contacts{
     background: #023E73;
     padding: 0px 5px 0px 5px;
 }
-#header__contacts > ul {
+.header__contacts > ul {
     text-align: center;
 }
-#header__contacts>ul>u{
+.header__contacts>ul>u{
     font-weight: normal;
     font-size: 16px;
     color: white;
 }
-#header__contacts>ul>li{
+.header__contacts>ul>li{
     padding-bottom: 5px;
     font-weight: bold;
     font-size: 18px;
     color: white;
 }
 
-#header__links{
+.header__links{
     margin: auto;
     text-align: center;
 }
-#header__links>ul{
+.header__links>ul{
     display: flex;
     gap: 30px;
 }
-#header__links>ul>li>a{
+.header__links>ul>li>a{
     font-weight: bold;
     font-size: 12px;
     color: #023E73;
     text-transform: uppercase;
 }
-#header__links>ul>li>a:hover{
+.header__links>ul>li>a:hover{
     text-decoration-line: underline;
 }
-#header__sign-up-button{
-    margin: auto 0;
+
+.header__sign-up-button{
+    margin-top: 25px;
     width: 200px;
-    height: 50px;
     padding: 0 20px 0 20px;
-    border-radius: 30px;
-    border-style: none;
-    background: linear-gradient(to right,
-    #023E73, #FFFFFF 140%);
-    color: white;
-    font-weight: 700;
     font-size: 14px;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
-#header__sign-up-button:hover{
+
+/*{
     background: linear-gradient(to right,
     SkyBlue, white 140%);
-}
+}*/

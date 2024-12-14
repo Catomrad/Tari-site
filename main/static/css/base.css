@@ -3,7 +3,7 @@
 }
 *{
     font-family: var(--font-family);
-    font-size: 12px;
+    font-size: 10px;
     margin: 0;
     padding: 0;
     border: 0;
@@ -31,7 +31,27 @@ main{
     max-width: 1200px;
     background: white;
 }
-.section > h1{
+.highlight-button{
+    margin: auto 0;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    height: 50px;
+    margin: 0 15px;
+    border-radius: 30px;
+    border-style: none;
+    background: linear-gradient(to right,
+    #023E73, #FFFFFF 140%);
+    color: white;
+    font-weight: 700;
+}
+button.highlight-button:hover,
+.button.highlight-button:hover,
+[role="button"].highlight-button:hover{
+    background: #564F4F;
+}
+section {
+    scroll-margin-top: 100px;
+}
+section > h1{
     width: 500px;
     text-align: center;
     margin-left: auto;

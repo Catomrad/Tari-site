@@ -17,37 +17,39 @@
     <link rel="stylesheet" href="{% static 'css/contact.css' %}">
     <link rel="stylesheet" href="{% static 'css/questions.css' %}">
     <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/modal.css' %}">
+    <link rel="icon" href="{% static 'img/Tooth.jpg' %}"><!-- 32×32 -->
     <meta charset="UTF-8">
     <title>Стоматологическая клиника "Tari"</title>
 </head>
 <body>
-    <header class="header">
+    <header id="header">
         <div class="header__content">
-            <img id="header__logo" alt='Logo'
+            <img class="header__logo" alt='Logo'
                 src= "{% static 'img/logotip1.png' %}">
-            <div id="header__contacts">
+            <div class="header__contacts">
                 <ul>
                     <u>пн-пт с 09:00-19:00</u>
                     <li><i class="fas fa-map-marker-alt"></i> пр-т. Ленина 94</li>
-                    <li><i class="fas fa-phone"></i> 8(3842)544-222</li>
+                    <li><i class="fas fa-phone-volume fa-rotate-by"></i> 8(3842)544-222</li>
                     <li><i class="fab fa-whatsapp"></i> 8(996)413-08-81</li>
                 </ul>
             </div>
-            <nav id="header__links">
+            <nav class="header__links">
                 <ul>
-                    <li><a href="/">Главная</a></li>
-                    <li><a href="/">Услуги</a></li>
-                    <li><a href="/">Специалисты</a></li>
-                    <li><a href="/">Отзывы</a></li>
-                    <li><a href="/">О Клинике</a></li>
-                    <li><a href="/">Контакты</a></li>
+                    <li><a href="#banners-section">Главная</a></li>
+                    <li><a href="#popular-services-section">Услуги</a></li>
+                    <li><a href="#employees-section">Специалисты</a></li>
+                    <li><a href="#reviews-section">Отзывы</a></li>
+                    <li><a href="#about-section">О Клинике</a></li>
+                    <li><a href="#contact-section">Контакты</a></li>
                 </ul>
             </nav>
-            <button id="header__sign-up-button">Запись на приём</button>
+            <button class="highlight-button header__sign-up-button openModalBtn">Запись на приём</button>
         </div>
     </header>
     <main class="main">
-        <section class="section banners-section">
+        <section id="banners-section">
             <div class="banners__scroll-container">
                 <div class="banner">
                     <img src= "{% static 'img/ESCF1606.jpg' %}">
@@ -55,7 +57,7 @@
                         <span class="big-span">Самая Лучшая забота о вашей улыбке</span><br>
                         <span>Бесплатная консультация ортопеда</span><br>
                         <span>Лечение и протезирование в одной клинике</span><br>
-                        <button>Позвонить</button>
+                        <button class="highlight-button">Позвонить</button>
                     </div>
                 </div>
                 <div class="banner">
@@ -64,7 +66,7 @@
                         <span class="big-span">Лучшая забота о вашей улыбке</span><br>
                         <span>Бесплатная консультация ортопеда</span><br>
                         <span>Лечение и протезирование в одной клинике</span><br>
-                        <button>Позвонить</button>
+                        <button class="highlight-button">Позвонить</button>
                     </div>
                 </div>
                 <div class="banner">
@@ -73,7 +75,7 @@
                         <span class="big-span">Лучшая забота о вашей улыбке</span><br>
                         <span>Бесплатная консультация ортопеда</span><br>
                         <span>Лечение и протезирование в одной клинике</span><br>
-                        <button>Позвонить</button>
+                        <button class="highlight-button">Позвонить</button>
                     </div>
                 </div>
             </div>
@@ -87,7 +89,7 @@
                 <span class="banner__dot" onclick="banner_slider.currentSlide(3)"></span>
             </div>
         </section>
-        <section class="section popular-services-section">
+        <section id="popular-services-section">
             <h1>Популярные услуги</h1>
             <div class="popular-services">
                 <div class="service-scroll-container">
@@ -152,7 +154,7 @@
             </div>
             <div class="actual-price">
                 <label>Актуальный прайс от 12.02.2024</label>
-                <button class="button download-button">Скачать</button>
+                <button class="highlight-button download-button">Скачать</button>
                 <div class="price-list">
                     <button class="prev-button" onclick="plusSlides(-1)"
                     aria-label="Посмотреть предыдущий слайд">&lt;</button>
@@ -171,10 +173,10 @@
                     <button class="next-button" onclick="plusSlides(1)" 
                 aria-label="Посмотреть следующий слайд">&gt</button>
                 </div>        
-                <span>ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ НЕОБХОДИМО ПРОКОНСУЛЬТИРОВАТЬСЯ С ВРАЧОМ</span>
+                <div class="attention">ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ НЕОБХОДИМО ПРОКОНСУЛЬТИРОВАТЬСЯ С ВРАЧОМ</div>
             </div>
         </section>
-        <section class="section employees-section">
+        <section id="employees-section">
             <h1>Наши специалисты</h1>
             <div class="employees__scroll-container">
                 <button class="prev-button"aria-label="Посмотреть предыдущий слайд">&lt;</button>
@@ -238,7 +240,7 @@
                 <button class="next-button" aria-label="Посмотреть следующий слайд">&gt</button>
             </div>
         </section>
-        <section class="section reviews-section">
+        <section id="reviews-section">
             <h1>Отзывы</h1>
             <div class="reviews-cascade">
                 <div class="review" style="display: none;">
@@ -253,52 +255,103 @@
                 target="_blank" >Тари на карте Кемерова — Яндекс Карты</a>
             </div>
         </section>
-        <section class="section about-section">
+        <section id="about-section">
             <h1>О клинике</h1>
             <div class="description">
                 <div class="description__text">
-                    <span>В стоматологии «Тари»</span> создана уютная атмосфера для ощущения комфорта 
-                    и спокойствия своих пациентов. 
-    Клиентам гарантируется доступная стоимость услуг и высокий уровень культуры обслуживания.
-
-    <br> <br> <span>Мы предлагаем широкий перечень услуг терапевтических:</span> аппликационная и инфильтрационная анестезия 
-с использованием импортных препаратов, 
-раскрытие полости зуба, медикаментозная обработка кариозной полости, восстановление зуба пломбой 
-с использованием материалов химического и светового отверждения. Здесь проводится комплексная 
-гигиена всей полости рта: 
-фторирование эмали, удаление зубных отложений ультразвуковым методом и прибором Air Flow.
-<br> <span>Ортопедических:</span> изготовление временных коронок, полный съемный протез, бюгельный протез, 
-изготовление временных коронок, цельнолитая коронка, металлокерамическая коронка, металлокерамическая коронка на имплантат и др.
+                    <p>
+                        <strong>В стоматологии «Тари»</strong> создана уютная атмосфера для ощущения
+                        комфорта и спокойствия своих пациентов.
+                        Клиентам гарантируется доступная стоимость услуг и высокий уровень
+                        культуры обслуживания.
+                        <br>
+                    </p>
+                    <p>
+                        <strong>Мы предлагаем широкий перечень услуг терапевтических:</strong>
+                        аппликационная и инфильтрационная анестезия с использованием
+                        импортных препаратов, раскрытие полости зуба, медикаментозная
+                        обработка кармозной полости, восстановление зуба пломбой с
+                        использованием материалов химического и светового отверждения.
+                        Здесь проводится комплексная гигиена всей полости рта:
+                        фторирование эмали, удаление зубных отложений ультразвуковым
+                        методом и прибором Air Flow.
+                    </p>
+                    <p>
+                        <strong>Ортопедических: изготовление временных коронок, полный съемный</strong>
+                        протез, бюгельный протез, изготовление временных коронок,
+                        цельнолитая коронка, металлокерамическая коронка,
+                        металлокерамическая коронка на имплантат и др.
+                    </p>
+                    
                 </div>
                 <div class="description__images">
-                    <img src="{% static 'img/Tooth.jpg' %}">
-                    <img src="{% static 'img/Tooth.jpg' %}">
-                    <img src="{% static 'img/Tooth.jpg' %}">
-                    <img src="{% static 'img/Tooth.jpg' %}">
+                    <div class='image-row'>
+                        <img src="{% static 'img/Tooth.jpg' %}">
+                        <img src="{% static 'img/Tooth.jpg' %}">
+                    </div>
+                    <div class='image-row'>
+                        <img src="{% static 'img/Tooth.jpg' %}">
+                        <img src="{% static 'img/Tooth.jpg' %}">
+                    </div>
                     <span>Клиника работает в будние дни, с 9:00 до 19:00 
                         (суббота и воскресенье – выходной).</span>
                 </div>
             </div>
             <div class="license-container"> 
-                <h2>Лицензия</h2>
+                
                 <div class="licenses">
+                    <h2>Лицензия</h2>
                     <img src="{% static 'img/List1.png' %}">
                     <img src="{% static 'img/List2.png' %}">
                     <img src="{% static 'img/List3.png' %}">
                 </div>
-            </div>
-            <div class="documents">
-                <button>Документы +</button>
-                <div class="documents-container">
-                    
+                <div class="video-container">
+                    <iframe 
+                    src="https://www.youtube.com/embed/1H7x-nvf748?si=Q9ooCtmtr1JDK3Df" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                    </iframe>
                 </div>
             </div>
+            <details>
+                <summary>Документы</summary>
+                <div class="documents-container">
+                    
+                    <ul>
+                        <h2>Выписка из реестра лицензий</h2>
+                        <li><a href="{% static 'img/Tooth.jpg' %}" download>Выписка из Егрюл</a></li>
+                        <li><a href="{% static 'img/Tooth.jpg' %}" download>Файл 3</a></li>
+                    </ul>
+                </div>
+            </details>
+            
         </section>
-        <section class="section contact-section">
+        <section id="contact-section">
             <h1>Контакты</h1>
             <div class="contacts_and_map-container">
-                <div class="contacts">
-                    <span>Наименование:</span><br>
+                <span class="contacts">
+                    <strong>Наименование:</strong><br>
+                    Полное наименование - Общество с ограниченной<br> 
+                    ответственностью "Тари";<br>
+                    Сокращённое наименование - ООО "Тари";<br>
+                    <strong>Адрес:</strong><br>
+                    650023, Россия, Кемеровская область, г. Кемерово,<br> 
+                    пр. Ленина, д. 94-3;<br>
+                    <strong>Режим работы:</strong><br>
+                    Понедельник - Пятница с 09:00 до 19:00;<br>
+                    Суббота, воскресенье - выходные дни.<br>
+                    <strong>Телефоны:</strong><br>
+                    8(3842)-544-222;<br>
+                    8(996)-413-08-81.<br>
+                    <strong>Email:</strong><br>
+                    TARIstomatolog@yandex.ru<br>
+                    <strong>Приём граждан генеральным директором:</strong><br>
+                    Вторник с 11:00 до 13:00   
+                </span>
+                <!--<span>Наименование:</span><br>
                     Полное наименование - Общество с ограниченной 
                     ответственностью "Тари"; 
                     Сокращённое наименование - ООО "Тари";
@@ -307,40 +360,90 @@
                     пр. Ленина, д. 94-3;
                     <br><span>Режим работы:</span><br>
                     Понедельник - Пятница с 09:00 до 19:00;
-    Суббота, воскресенье - выходные дни.
+                     Суббота, воскресенье - выходные дни.
                     <br><span>Телефоны:</span><br>
                     8(3842)-544-222;
-    8(996)-413-08-81.
+                    8(996)-413-08-81.
                     <br><span>Email:</span><br>
                     TARIstomatolog@yandex.ru
                     <br><span>Приём граждан генеральным директором:</span><br>
-                    Вторник с 11:00 до 13:00 
-                </div>
-                <div class="map" style="position:relative;overflow:hidden;">
+                    Вторник с 11:00 до 13:00-->
+                <div class="map" style="position:relative;">
                     <a href="https://yandex.ru/maps/org/tari/1090980756/?utm_medium=mapframe&utm_source=maps" 
                     style="color:#eee;font-size:12px;position:absolute;top:0px;">Тари</a>
                     <a href="https://yandex.ru/maps/64/kemerovo/category/dental_clinic/184106132/?utm_medium=mapframe&utm_source=maps" 
                     style="color:#eee;font-size:12px;position:absolute;top:14px;">Стоматологическая клиника в Кемерове</a>
                     <iframe src="https://yandex.ru/map-widget/v1/?ll=86.137689%2C55.345348&mode=search&oid=1090980756&ol=biz&z=13.88" 
-                    width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+                    width=100%% height=100% frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
                 </div>
             </div>
         </section>
-        <section class="section question-section">
+        <section id="question-section">
             <h2>Закажите звонок или свяжитесь с нами самостоятельно</h2>
             <div class="buttons">
-                <button>Заказать звонок</button>
-                <button><i class="fab fa-whatsapp"></i>Написать в WhatsApp</button>
-                <button>Позвонить</button>
+                <button class="highlight-button openModalBtn">Заказать звонок</button>
+                <button class="highlight-button"><!--<i class="fab fa-whatsapp">--></i>Написать в WhatsApp</button>
+                <button class="highlight-button">Позвонить</button>
             </div>
 
         </section>
     </main>
     <footer>
-
-    </footer>
+        <div class="footer-info">
+            <div class="info-block">
+                <h1>
+                    ООО "Тари"
+                </h1>
+                <h2>
+                    Г. Кемерово,<br>
+                    Пр. Ленина, д. 94
+                </h2>
+                <p>
+                    Данный интернет-сайт, а также вся информация, предоставленная на нём, включая цены, 
+                    носит исключительно информационный характер 
+                    и ни при каких условиях не является публичной офертой, определяемой 
+                    положениями Статьи 437 Гражданского кодекса Российской Федерации.<br>
+                    <br>
+                    Для получения подробной информации о стоимости указанных услуг, пожалуйста, обращайтесь к администратору нашей клиники “Тари”.
+                </p>
+            </div>
+            <div class="contact-block">
+                <h1>Контакты:</h1>
+                <li><i class="far fa-envelope"></i> taristomatolog@yandex.ru</li>
+                <li><i class="fab fa-whatsapp"></i> +7(996)413-08-81</li>
+                <li><i class="fas fa-phone-volume fa-rotate-by"></i>+7(3842)544-222</li>
+            </div>
+            <div class="navigation-block">
+                <li><a href="#banners-section">Главная</a></li>
+                <li><a href="#popular-services-section">Услуги</a></li>
+                <li><a href="#employees-section">Специалисты</a></li>
+                <li><a href="#reviews-section">Отзывы</a></li>
+                <li><a href="#about-section">О Клинике</a></li>
+                <li><a href="#contact-section">Контакты</a></li>
+            </div>
+        </div>
+    </footer id="footer">
+    <div class="bottom-line">
+        <span>	&copy; ООО "Тари" &copy; 2024 ООО "Тари"    Политика конфиденциальности</span>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <button type="close" id="closeModalBtn" class="close-button"><i class="fas fa-times"></i></button>
+            <h1>Заказать звонок</h1>
+            <h2>Заполните форму и администратор свяжется с Вами в ближайшее время</h2>
+            <form id="requestForm" action="https://formspree.io/f/xpwzevpr" method="POST">
+                <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                <input type="phone" id="phone" name="phone" placeholder="+7 ХХХ ХХ ХХ номер телефона" required>
+                <textarea type="text" id="description" name="description" 
+                placeholder="По желанию укажите цель посещения/симптомы и подходящую дату приёма"></textarea>
+                <label for="agriement"><input type="checkbox" id="agriement" required>Я согласен(на) на обработку персональных данных</label>
+                <button type="submit" class="highlight-button submit-button" >Заказать звонок</button>
+            </form> 
+        </div>
+    </div>
     <script src="{% static 'js/sliders1.js' %}"></script>
     <script src="{% static 'js/sliders.js' %}"></script>
+    <script src="{% static 'js/modal.js' %}"></script>
 </body>
 
 </html>

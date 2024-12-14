@@ -1,16 +1,17 @@
-.popular-services-section{
+#popular-services-section{
   margin-top: 10px;
   margin-bottom: 10px;
 }
 .popular-services{
   height: 140px;
   margin-bottom: 20px;
-  
+  position: relative;
 }
 .service-scroll-container{
   display: flex;
   width: 100%;
   overflow-x: hidden;
+  padding: 10px 0 20px 0;
 }
 .service-page{
   display: flex;
@@ -105,6 +106,8 @@
   width: 100%;
 }
 .actual-price > label{
+  position: relative;
+  top: 5px;
   font-weight: 700;
   font-size: 30px;
   background: linear-gradient(180deg,
@@ -114,21 +117,14 @@
   -webkit-text-fill-color: transparent;
 }
 .actual-price > .download-button{
-  border-radius: 30px;
   padding: 15px 48px;
   width: 200px;
-  height: 50px;
-  font-weight: 700;
   font-size: 16px;
-  color: #fff;
-  background: linear-gradient(to right,
-  #023E73, #FFFFFF 140%);
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
-.download-button:hover{
+/*.download-button:hover{
   background: linear-gradient(to right,
   SkyBlue, white 140%);
-}
+}*/
 .price-list{
   padding-top: 30px;
   padding-bottom: 30px;
@@ -168,15 +164,17 @@ div .choosen{
   margin: 0px;
   position: absolute;
 }
-.actual-price > span{
-  margin: 0 10%;
+.actual-price > .attention{
+  margin: 0 3%;
   font-weight: 900;
   font-size: 20px;
   letter-spacing: 0.1em;
   background: linear-gradient(180deg,
    #564f4f 0%, #b8a8a8 42%,
    rgba(188, 172, 172, 0.37) 97%);
+  text-shadow: 0 20px 4px 0 rgba(2, 62, 115, 0.2);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-align: center;
 }

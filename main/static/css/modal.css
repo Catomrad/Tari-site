@@ -1,0 +1,110 @@
+/*#modal{
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    max-width: 560px;
+    top: 30vh;
+    margin: 0 auto;
+    padding: 0 auto;
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25), -4px -4px 4px 0 rgba(0, 0, 0, 0.25);
+    background: rgba(86, 79, 79, 0.95);
+}*/
+#modal {
+    display: flex; /* Скрыто по умолчанию */
+    position: fixed; /* Фиксированное положение */
+    z-index: 1000; /* Поверх всего */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Прокрутка, если контент большой */
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Контент модального окна */
+.modal-content {
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25), -4px -4px 4px 0 rgba(0, 0, 0, 0.25);
+    background: rgba(86, 79, 79, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+}
+.close-button i{
+    font-size: 30px;
+}
+.close-button:hover,
+.close-button:focus {
+    color: black;
+}
+.modal-content form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+    justify-content: left;
+}
+.modal-content h1 {
+    font-weight: 800;
+    font-size: 28px;
+    text-align: center;
+    color: #fff;
+}
+.modal-content h2{
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+}
+.modal-content input{
+    font-size: 16px;
+    min-height: 50px;
+    overflow: auto;
+    box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+#description{
+    justify-content: start;
+    min-height: 130px;
+    font-size: 16px;
+    resize: vertical;
+    overflow: auto;
+    box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+#description::placeholder {
+    white-space: pre-line;
+}
+#requestForm label {
+    display: flex; /* Используем flexbox для выравнивания */
+    align-items: center; /* Выравниваем элементы по вертикали */
+    gap: 10px; /* Расстояние между чекбоксом и текстом */
+    cursor: pointer; /* Курсор в виде руки */
+    font-weight: 300;
+    font-size: 14px;
+    color: #fff;
+}
+
+input[type="checkbox"] {
+    width: 18px; /* Размер чекбокса */
+    height: 18px;
+    cursor: pointer; /* Курсор в виде руки */
+    box-shadow: none;
+}
+.submit-button{
+    position: relative;
+    width: 200px;
+    font-size: 16px;
+    margin: auto;
+}
